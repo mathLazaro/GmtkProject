@@ -287,6 +287,8 @@ GameObject:
   - component: {fileID: 103979284}
   - component: {fileID: 103979283}
   - component: {fileID: 103979286}
+  - component: {fileID: 103979287}
+  - component: {fileID: 103979288}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -358,6 +360,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseUI: {fileID: 732534159}
   hud: {fileID: 240667213}
+--- !u!114 &103979287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103979282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcdd5e8a5ee28944abffc3eae7026da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 1452313576}
+--- !u!114 &103979288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103979282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed14d9b9a49aa5409e82e06c845e6f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minutos: {fileID: 667048941}
+  segundos: {fileID: 1995200692}
+  minScore: {fileID: 216925204}
+  segScore: {fileID: 1654969848}
 --- !u!1 &151222673
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &240667214
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1376,7 +1407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &732534160
 RectTransform:
   m_ObjectHideFlags: 0
