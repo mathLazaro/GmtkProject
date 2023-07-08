@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 434188186763073800}
   - component: {fileID: 2491726516523549258}
   m_Layer: 0
-  m_Name: DamageUpgrade
+  m_Name: IceUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3db05f7df9a59154bb00bbd775528c0c, type: 3}
-  m_Color: {r: 0.5310281, g: 0.36078432, b: 0.81960785, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.89388084, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -167,11 +167,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2491726516523549258}
         m_TargetAssemblyTypeName: UpgradeController, Assembly-CSharp
-        m_MethodName: AddPlayerDamage
-        m_Mode: 1
+        m_MethodName: AddFamiliar
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6633288349061125328, guid: c64bfa73f0faf7d4d9ebf75e7eec39fd, type: 3}
+          m_ObjectArgumentAssemblyTypeName: FamiliarController, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -196,4 +196,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c3f6ab21334ee4bbea8bbe017f4eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 27.8
+  speed: 20.5

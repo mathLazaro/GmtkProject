@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2011542545
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.43137255}
@@ -188,7 +188,8 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  speed: 20.1
+  isFrozen: 0
+  speed: 173.4
   healthbar: {fileID: 6038461849521989961}
 --- !u!58 &1356814434537247311
 CircleCollider2D:
@@ -323,7 +324,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2011542545
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0.5566038, b: 0.026579687, a: 1}
