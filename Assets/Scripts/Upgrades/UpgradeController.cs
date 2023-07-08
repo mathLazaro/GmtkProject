@@ -40,4 +40,9 @@ public class UpgradeController : MonoBehaviour
         GameManager.Instance.playerController.damageLevel += 1;
         Destroy(gameObject);
     }
+    public void AddFamiliar(FamiliarController familiarPrefab)
+    {
+        Instantiate(familiarPrefab, GameManager.Instance.familiarManager);
+        Destroy(gameObject);
+    }
 }

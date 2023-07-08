@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class EnemyController : MonoBehaviour
 {
     public UnityEvent<EnemyController> onDeath;
+    public int frozenCount;
     [SerializeField] private float speed;
     [SerializeField] private Transform healthbar;
     private float _life = 10f;
@@ -32,7 +33,12 @@ public class EnemyController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        _rigidbody2D.AddRelativeForce(Vector2.right * speed * Time.fixedDeltaTime, ForceMode2D.Force);
+        _rigidbody2D.velocity = transform.TransformVector(Vector2.right * speed * Time.fixedDeltaTime);
+        if (frozenCount <= 0) return;
+        for (int i = 0; i < frozenCount; i++)
+        {
+            _rigidbody2D.velocity *= 0.7f;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public PrincessController princessController;
     public EnemyManager enemyManager;
     public PlayerController playerController;
+    public Transform familiarManager;
     public float timer;
     public int score = 0;
     public int princessLife
@@ -20,5 +21,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
     }
 }
