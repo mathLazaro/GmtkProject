@@ -20,9 +20,9 @@ public class ShotController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("enemy hit !");
+        EnemyController enemy = col.GetComponent<EnemyController>();
+        enemy.Damage(_damage);
         Destroy(gameObject);
-        //col.GetComponent<>()
     }
 
     void FixedUpdate()
@@ -37,6 +37,7 @@ public class ShotController : MonoBehaviour
 
     public void SetProperties(Vector2 position, float angle = 0f, float velocity = 5f, float damage = 1f, float time = 1f)
     {
+        //angle *= -Mathf.Deg2Rad;
         transform.SetLocalPositionAndRotation(new Vector3(position.x, position.y, 0), Quaternion.Euler(0,0,angle));
         _velocity = velocity;
         _damage = damage;

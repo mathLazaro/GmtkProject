@@ -47,15 +47,15 @@ public class PlayerController : MonoBehaviour
     private void Shoot()
     {
         ShotController shot = Instantiate(shotPrefab,transform);
-        shot.SetProperties(Vector2.zero, 0, 10, 1 + 0.7f * damageLevel, 0.5f + 0.25f * rangeLevel);
+        shot.SetProperties(Vector2.zero, 0, 30, 1 + 0.7f * damageLevel, (0.5f + 0.25f * rangeLevel)/3);
         if (powerLevel > 0)
         {
             for (int i = 1; i < (powerLevel + 1); i++)
             {
                 ShotController _shot = Instantiate(shotPrefab,transform);
-                _shot.SetProperties(Vector2.zero, i * 18, 10, 1 + 0.7f * damageLevel, 0.5f + 0.25f * rangeLevel);
+                _shot.SetProperties(Vector2.zero, i * 37, 30, (1 + 0.7f * damageLevel)*0.3f, (0.5f + 0.25f * rangeLevel)/3);
                 _shot = Instantiate(shotPrefab,transform);
-                _shot.SetProperties(Vector2.zero, -i * 18, 10, 1 + 0.7f * damageLevel, 0.5f + 0.25f * rangeLevel);
+                _shot.SetProperties(Vector2.zero, -i * 37, 30, (1 + 0.7f * damageLevel)*0.3f, (0.5f + 0.25f * rangeLevel)/3);
             }
         }
     }
