@@ -3,16 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Princess
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Terrain
   - Water
   - UI
-  - 
-  - 
+  - Player Shot
+  - Enemy
   - 
   - 
   - 
@@ -40,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3071618049
+    locked: 0
+  - name: Enemy
+    uniqueID: 769882023
+    locked: 0
+  - name: Player Shot
+    uniqueID: 2087239213
+    locked: 0
+  - name: Player
+    uniqueID: 615165789
+    locked: 0
+  - name: UI
+    uniqueID: 2011542545
     locked: 0

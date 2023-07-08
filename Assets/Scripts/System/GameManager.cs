@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public PrincessController princessController;
     public EnemyManager enemyManager;
+    public PlayerController playerController;
     public float timer;
     public int score = 0;
     public int princessLife

@@ -18,6 +18,6 @@ public class PrincessController : MonoBehaviour
 
     public void Hurt()
     {
-        Debug.Log("the princess has been hurt!");
+        life--;
     }
 }
