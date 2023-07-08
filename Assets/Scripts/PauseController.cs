@@ -48,4 +48,8 @@ public class PauseController : MonoBehaviour
     {
         SceneManager.LoadScene("MenuInicial");
     }
+    public void CarregarCena()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }

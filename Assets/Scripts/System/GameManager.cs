@@ -21,8 +21,5 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Update()
-    {
-        timer += Time.deltaTime;
-    }
+
 }
