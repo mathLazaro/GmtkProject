@@ -4,11 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8655b5a-3bb5-4dd5-a0cf-d748f4a438bd" name="Changes" comment="" />
+    <list default="true" id="c8655b5a-3bb5-4dd5-a0cf-d748f4a438bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/UpgradeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/UpgradeManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GmtkProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GmtkProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Shots/ShotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Shots/ShotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/PrincessController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/PrincessController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/PrincessController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688782428424</updated>
-      <workItem from="1688782453905" duration="6114000" />
+      <workItem from="1688782453905" duration="13169000" />
     </task>
     <servers />
   </component>
@@ -72,6 +93,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

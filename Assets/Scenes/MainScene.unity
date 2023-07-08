@@ -975,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53fabe92d404c64a4b65f60f394a1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyRate: 8.09
+  enemyRate: 4.25
   prefabList:
   - {fileID: 1655692974618480542, guid: a7328ea562cc6a145aaf2663f9ecf9a9, type: 3}
 --- !u!1 &1691645728
