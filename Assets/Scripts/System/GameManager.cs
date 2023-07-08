@@ -14,6 +14,13 @@ public class GameManager : MonoBehaviour
         get => princessController.life;
     }
 
+    public static GameManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Update()
     {
         timer += Time.deltaTime;
