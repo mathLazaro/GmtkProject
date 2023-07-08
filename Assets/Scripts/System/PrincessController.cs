@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PrincessController : MonoBehaviour
 {
     public int life = 20;
-    void Start()
-    {
-        
-    }
+    public Image img;
 
-    // Update is called once per frame
-    void Update()
+    private void Start() 
     {
-        
+        img = GetComponent<Image>();
+    }
+    
+    private void Update() 
+    {
+        img.fillAmount = life/20f;
     }
 
     public void Hurt()
