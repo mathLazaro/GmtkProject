@@ -50,6 +50,6 @@ public class PauseController : MonoBehaviour
     }
     public void CarregarCena()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainScene");
     }
 }

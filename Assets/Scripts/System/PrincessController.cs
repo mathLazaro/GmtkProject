@@ -8,11 +8,6 @@ public class PrincessController : MonoBehaviour
     public int life = 20;
     public Image img;
 
-    private void Start() 
-    {
-        img = GetComponent<Image>();
-    }
-    
     private void Update() 
     {
         img.fillAmount = life/20f;
