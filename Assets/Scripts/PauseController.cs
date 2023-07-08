@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseController : MonoBehaviour
 {
      [SerializeField] private GameObject pauseUI;
+     [SerializeField] private GameObject hud;
     public static bool isPaused;
 
     private void Start() {
@@ -20,12 +21,14 @@ public class PauseController : MonoBehaviour
             isPaused = true;
             Time.timeScale=0f;
             pauseUI.SetActive(true);
+            hud.SetActive(false);
         }
         else if(inputPause && isPaused==true) // Serve para sair do pause
         {
             isPaused = false;
             Time.timeScale=1f;
             pauseUI.SetActive(false);
+            hud.SetActive(true);
         }
     }
 
@@ -39,6 +42,7 @@ public class PauseController : MonoBehaviour
         isPaused = false;
         Time.timeScale=1f;
         pauseUI.SetActive(false);
+        hud.SetActive(true);
     }
     public void CarregarMenu()
     {
