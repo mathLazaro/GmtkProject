@@ -16,5 +16,6 @@ public class PrincessController : MonoBehaviour
     public void Hurt()
     {
         life--;
+        AudioController.Instance.PlayPrincessHurtAudio();
     }
 }

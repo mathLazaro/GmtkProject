@@ -43,5 +43,6 @@ public class ShotController : MonoBehaviour
         _damage = damage;
         _time = time;
         transform.SetParent(null,true);
+        
     }
 }

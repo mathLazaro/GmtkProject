@@ -14,13 +14,25 @@ public class PlayerController : MonoBehaviour
     [Range(0,10)] public int rangeLevel; //range dos tiro
     [Range(0,10)] public int damageLevel; //vida dos tiro
     [Range(0,10)] public int powerLevel; //quantidade de tiro
-
+    
+    private Action ShootAction;
     private Rigidbody2D _rigidbody2D;
 
     private float _physicsSpeed;
     private float _fireTimer = 0f;
     
-    // Start is called before the first frame update
+    private void OnEnable() 
+    {
+        ShootAction += AudioFire;
+        ShootAction += Shoot;
+    }
+
+    private void OnDisable()
+    {
+        ShootAction -= AudioFire;
+        ShootAction -= Shoot;
+    }
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -35,7 +47,7 @@ public class PlayerController : MonoBehaviour
         if (_fireTimer <= 0 && Input.GetButton("Fire1"))
         {
             _fireTimer = fireRate;
-            Shoot();
+            ShootAction?.Invoke();
         }
     }
 
@@ -58,5 +70,9 @@ public class PlayerController : MonoBehaviour
                 _shot.SetProperties(Vector2.zero, -i * 37, 30, (1 + 0.7f * damageLevel)*0.3f, (0.5f + 0.25f * rangeLevel)/3);
             }
         }
+    }
+    private void AudioFire()
+    {
+       AudioController.Instance.PlayFireAudio();
     }
 }
