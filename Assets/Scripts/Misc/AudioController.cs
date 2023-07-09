@@ -27,16 +27,17 @@ public class AudioController : MonoBehaviour
 
     public void PlayFireAudio()
     {
-        StartCoroutine(FireAudioClip(Input.GetButton("Fire1")));
-    }
-
-    
-    IEnumerator FireAudioClip(bool input)
-    {
-        if(input)
+        if(Input.GetButtonDown("Fire1"))
         {
             fire.Play();
-            yield return new WaitForSeconds(0.5f);
         }
     }
+
+    /*
+    IEnumerator FireAudioClip()
+    {
+            
+            yield return new WaitForSeconds(1f);
+            fire.Pause();
+    }*/
 }

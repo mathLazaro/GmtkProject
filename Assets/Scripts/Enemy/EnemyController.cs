@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        transform.right = GameManager.Instance.princessController.transform.position - transform.position;
+        transform.up = GameManager.Instance.princessController.transform.position - transform.position; // right
         
         healthbar.localScale = new Vector3(_hbscale * _life/_maxlife, healthbar.localScale.y, healthbar.localScale.z);
         if (_life <= 0)
@@ -33,7 +33,7 @@ public class EnemyController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        _rigidbody2D.velocity = transform.TransformVector(Vector2.right * speed * Time.fixedDeltaTime);
+        _rigidbody2D.velocity = transform.TransformVector(Vector2.up * speed * Time.fixedDeltaTime);
         if (frozenCount <= 0) return;
         for (int i = 0; i < frozenCount; i++)
         {
