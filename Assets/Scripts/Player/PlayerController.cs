@@ -15,23 +15,23 @@ public class PlayerController : MonoBehaviour
     [Range(0,10)] public int damageLevel; //vida dos tiro
     [Range(0,10)] public int powerLevel; //quantidade de tiro
     
-    private Action ShootAction;
+    //private Action ShootAction;
     private Rigidbody2D _rigidbody2D;
 
     private float _physicsSpeed;
     private float _fireTimer = 0f;
-    
+    /*
     private void OnEnable() 
     {
-        ShootAction += AudioFire;
+        ShootAction += 
         ShootAction += Shoot;
     }
 
     private void OnDisable()
     {
-        ShootAction -= AudioFire;
+        ShootAction -= AudioController.Instance.PlayFireAudio;
         ShootAction -= Shoot;
-    }
+    }*/
 
     void Start()
     {
@@ -44,10 +44,12 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0,0,rotSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal"),Space.Self);
         _physicsSpeed = Input.GetAxisRaw("Vertical") * speed;
         _fireTimer -= Time.deltaTime;
+        AudioController.Instance.PlayFireAudio();
         if (_fireTimer <= 0 && Input.GetButton("Fire1"))
         {
             _fireTimer = fireRate;
-            ShootAction?.Invoke();
+            //ShootAction?.Invoke();
+            Shoot();
         }
     }
 
@@ -70,9 +72,5 @@ public class PlayerController : MonoBehaviour
                 _shot.SetProperties(Vector2.zero, -i * 37, 30, (1 + 0.7f * damageLevel)*0.3f, (0.5f + 0.25f * rangeLevel)/3);
             }
         }
-    }
-    private void AudioFire()
-    {
-       AudioController.Instance.PlayFireAudio();
     }
 }
