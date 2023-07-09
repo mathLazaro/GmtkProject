@@ -41,10 +41,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         transform.Rotate(0,0,rotSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal"),Space.Self);
         _physicsSpeed = Input.GetAxisRaw("Vertical") * speed;
         _fireTimer -= Time.deltaTime;
-        AudioController.Instance.PlayFireAudio();
         if (_fireTimer <= 0 && Input.GetButton("Fire1"))
         {
             _fireTimer = fireRate;
@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
+        AudioController.Instance.PlayFireAudio();
         ShotController shot = Instantiate(shotPrefab,transform);
         shot.SetProperties(Vector2.zero, 0, 30, 1 + 0.7f * damageLevel, (0.5f + 0.25f * rangeLevel)/3);
         if (powerLevel > 0)

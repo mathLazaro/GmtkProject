@@ -25,6 +25,18 @@ public class AudioController : MonoBehaviour
         princessHurt.Play();
     }
 
+    public void BackgroundMusicControl(bool a)
+    {
+        if(a)
+        {
+            backgroundMusic.Play();
+        }
+        else
+        {
+            backgroundMusic.Pause();
+        }
+    }
+
     public void PlayFireAudio()
     {
         if(Input.GetButtonDown("Fire1"))

@@ -22,6 +22,7 @@ public class PauseController : MonoBehaviour
             Time.timeScale=0f;
             pauseUI.SetActive(true);
             hud.SetActive(false);
+            AudioController.Instance.BackgroundMusicControl(false);
         }
         else if(inputPause && isPaused==true) // Serve para sair do pause
         {
@@ -29,6 +30,7 @@ public class PauseController : MonoBehaviour
             Time.timeScale=1f;
             pauseUI.SetActive(false);
             hud.SetActive(true);
+            AudioController.Instance.BackgroundMusicControl(true);
         }
     }
 
@@ -43,6 +45,7 @@ public class PauseController : MonoBehaviour
         Time.timeScale=1f;
         pauseUI.SetActive(false);
         hud.SetActive(true);
+        AudioController.Instance.BackgroundMusicControl(true);
     }
     public void CarregarMenu()
     {
