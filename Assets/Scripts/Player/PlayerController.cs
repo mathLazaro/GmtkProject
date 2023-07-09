@@ -14,13 +14,25 @@ public class PlayerController : MonoBehaviour
     [Range(0,10)] public int rangeLevel; //range dos tiro
     [Range(0,10)] public int damageLevel; //vida dos tiro
     [Range(0,10)] public int powerLevel; //quantidade de tiro
-
+    
+    //private Action ShootAction;
     private Rigidbody2D _rigidbody2D;
 
     private float _physicsSpeed;
     private float _fireTimer = 0f;
-    
-    // Start is called before the first frame update
+    /*
+    private void OnEnable() 
+    {
+        ShootAction += 
+        ShootAction += Shoot;
+    }
+
+    private void OnDisable()
+    {
+        ShootAction -= AudioController.Instance.PlayFireAudio;
+        ShootAction -= Shoot;
+    }*/
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -32,9 +44,11 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0,0,rotSpeed * Time.deltaTime * Input.GetAxisRaw("Horizontal"),Space.Self);
         _physicsSpeed = Input.GetAxisRaw("Vertical") * speed;
         _fireTimer -= Time.deltaTime;
+        AudioController.Instance.PlayFireAudio();
         if (_fireTimer <= 0 && Input.GetButton("Fire1"))
         {
             _fireTimer = fireRate;
+            //ShootAction?.Invoke();
             Shoot();
         }
     }

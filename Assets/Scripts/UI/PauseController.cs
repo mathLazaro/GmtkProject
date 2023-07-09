@@ -46,6 +46,7 @@ public class PauseController : MonoBehaviour
     }
     public void CarregarMenu()
     {
+        Time.timeScale=1f;
         SceneManager.LoadScene("MenuInicial");
     }
     public void CarregarCena()
